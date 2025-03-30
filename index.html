@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak My Love - Sabia Rani</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9c27b0;
+            --secondary: #673ab7;
+            --accent: #ff9800;
+            --light: #f8f1ff;
+            --dark: #2c0a3a;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f3ff;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1601430854328-26d0d524344a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--primary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 4em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--secondary);
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .header-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .header-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border: 5px solid var(--light);
+        }
+        
+        .poem {
+            font-style: italic;
+            text-align: center;
+            font-size: 1.4em;
+            line-height: 2.0;
+            margin: 40px 0;
+            color: #555;
+            background: linear-gradient(135deg, rgba(233, 212, 247, 0.5), rgba(255, 240, 245, 0.7));
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 8px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px 0;
+        }
+        
+        .eid-button {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            min-width: 200px;
+            font-weight: 600;
+        }
+        
+        .eid-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+        }
+        
+        .eid-button:active {
+            transform: translateY(2px);
+        }
+        
+        .message {
+            display: none;
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(232, 244, 248, 0.9), rgba(255, 255, 255, 0.9));
+            border-radius: 15px;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.3em;
+            animation: fadeIn 0.7s;
+            border: 2px dashed var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .eid-prayer {
+            background: linear-gradient(135deg, rgba(245, 215, 110, 0.2), rgba(255, 240, 200, 0.4));
+            padding: 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 2px solid var(--accent);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .eid-prayer h3 {
+            color: var(--dark);
+            text-align: center;
+            font-size: 2em;
+            margin-top: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .arabic {
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.8em;
+            direction: rtl;
+            margin: 30px 0;
+            text-align: center;
+            color: var(--dark);
+            line-height: 2.5;
+        }
+        
+        .translation {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: center;
+            color: #555;
+            margin: 20px 0;
+        }
+        
+        .eid-countdown {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(100, 200, 255, 0.3));
+            padding: 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+            text-align: center;
+            border: 2px solid #3498db;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .eid-countdown h3 {
+            color: #2980b9;
+            font-size: 2em;
+            margin-top: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-box {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            min-width: 120px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .countdown-box:hover {
+            transform: scale(1.1);
+        }
+        
+        .countdown-value {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        
+        .countdown-label {
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1em;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #777;
+            font-size: 1.2em;
+            padding-top: 40px;
+            border-top: 2px solid #eee;
+        }
+        
+        .heart {
+            color: #e74c3c;
+            font-size: 1.8em;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .special {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: 1.3em;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .eid-traditions {
+            background: linear-gradient(135deg, rgba(255, 235, 205, 0.5), rgba(255, 245, 230, 0.7));
+            padding: 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 2px solid var(--accent);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .eid-traditions h3 {
+            color: var(--dark);
+            text-align: center;
+            font-size: 2em;
+            margin-top: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .eid-traditions ul {
+            columns: 2;
+            column-gap: 50px;
+            padding: 0 20px;
+        }
+        
+        .eid-traditions li {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            line-height: 1.8;
+            list-style-type: none;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .eid-traditions li:before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            .eid-traditions ul {
+                columns: 1;
+            }
+            
+            .countdown-container {
+                gap: 15px;
+            }
+            
+            .countdown-box {
+                min-width: 80px;
+                padding: 15px;
+            }
+            
+            .countdown-value {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Eid Mubarak My Beloved</h1>
+        <h2>Sabia Rani</h2>
+        
+        <div class="header-image">
+            <img src="https://i.ibb.co/tM7fRSyW/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Eid Mubarak">
+        </div>
+        
+        <div class="poem">
+            <p>The moon has smiled, the stars so bright,</p>
+            <p>All celebrate this Eid night.</p>
+            <p>But my heart finds its truest cheer,</p>
+            <p>When Eid brings me someone so dear.</p>
+            <br>
+            <p>Like the crescent in the sky so clear,</p>
+            <p>Your love shines bright throughout the year.</p>
+            <p>This Eid I pray with all my heart,</p>
+            <p>We're never destined to be apart.</p>
+            <br>
+            <p>May Allah bless you with joy so true,</p>
+            <p>And keep you happy the whole year through.</p>
+            <p>Eid Mubarak my love, my light,</p>
+            <p>You make my whole world warm and bright.</p>
+        </div>
+        
+        <div class="eid-prayer">
+            <h3>Eid Prayer for Us</h3>
+            <div class="arabic">
+                اللَّهُمَّ اجْعَلْنَا مِنَ التَّوَّابِينَ وَاجْعَلْنَا مِنَ الْمُتَطَهِّرِينَ
+            </div>
+            <div class="translation">
+                "O Allah, make us among those who repent and purify themselves."
+            </div>
+            <div class="arabic">
+                رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا
+            </div>
+            <div class="translation">
+                "Our Lord, grant us from among our spouses and offspring comfort to our eyes and make us an example for the righteous."
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button class="eid-button" onclick="showMessage(1)">Sweet Message</button>
+            <button class="eid-button" onclick="showMessage(2)">Eid Wish</button>
+            <button class="eid-button" onclick="showMessage(3)">For Sabia</button>
+            <button class="eid-button" onclick="showMessage(4)">My Prayer</button>
+            <button class="eid-button" onclick="showMessage(5)">Special Gift</button>
+            <button class="eid-button" onclick="showMessage(6)">Our Love</button>
+            <button class="eid-button" onclick="showMessage(7)">Blessings</button>
+            <button class="eid-button" onclick="showMessage(8)">Memories</button>
+            <button class="eid-button" onclick="showMessage(9)">Future</button>
+            <button class="eid-button" onclick="showMessage(10)">Tohid Says</button>
+            <button class="eid-button" onclick="showMessage(11)">Surprise</button>
+        </div>
+        
+        <div id="message1" class="message">
+            Sabia, your smile is sweeter than any Eid dessert. Wishing you the happiest Eid filled with love and joy!
+        </div>
+        
+        <div id="message2" class="message">
+            May this Eid bring you as much happiness as you've brought into my life. Eid Mubarak my beautiful Sabia!
+        </div>
+        
+        <div id="message3" class="message">
+            To the most special person in my life - Sabia Rani. May Allah bless you with all the happiness you deserve this Eid and always.
+        </div>
+        
+        <div id="message4" class="message">
+            My prayer this Eid is simple - to always see you happy, healthy, and by my side. Ameen.
+        </div>
+        
+        <div id="message5" class="message">
+            The best gift I could receive this Eid is your love. (But don't worry, I have a real gift for you too!)
+        </div>
+        
+        <div id="message6" class="message">
+            Our love shines brighter than the Eid moon. Thank you for being my light, Sabia.
+        </div>
+        
+        <div id="message7" class="message">
+            May Allah shower His countless blessings upon you, today and always. Eid Mubarak my love!
+        </div>
+        
+        <div id="message8" class="message">
+            Every Eid with you becomes a beautiful memory I'll cherish forever. Here's to making many more together.
+        </div>
+        
+        <div id="message9" class="message">
+            I look forward to celebrating many more Eids with you, building our future together. You're my dream come true.
+        </div>
+        
+        <div id="message10" class="message">
+            Assalamualaikum sabia meri shehzadi meri jaan mera eid ka chand meri duniya meri aankhrat mera pyaar Meri ruh mujhe maf karna es eid m aapke sath nhi hu lekin agli eid ham dono sath honge inshallah  is eid aapki behut yaad aayegi
+M janta hu aap ek achhi ladki ho
+Aap nek ho samajhdar ho achhi ho Orr behut khoobsurat ho 
+Aapki khoobsurati dekh kar mn nhi bharta dil karta h aapko bas dekhta rahu mere liye aap hi sab kuch ho meri eid Orr eid ka chand 
+Duniya magrib ke time eid ke chand ko dekhegi Orr m aapko 
+M aapse behut pyaar karta hu Orr karta rahunga insallah
+Kabhi ye mat samjhna aap Akeli ho m hamesha aapke sath hu agar aap जहन्नुम bhi jaogi to m aapke sath chalunga m janta hu ye achha trika nhi h ye kehna nhi chahiye lekin aap samjh rahi ho na m aapke sath rahunga marte dam Tak to Plz 🙏🏻 kabhi dukhi mat hona Orr kabhi rona mat khoob mehnat karo allah par bharosa rakho meri dua h aap ek jarur kamyab hogi
+Mujhe maf kar dena agar kuch galat bol diya ho to
+Eid Mubarak meri jan Allah aapko hamesha khush rakhe khamyab kare aapko sehat de izzat de ilam de Orr fir aapko mujhe de 😁😁😁😁😁😁😁.
+        </div>
+        
+        <div id="message11" class="message">
+            Surprise! I love you more than words can say. Will you be my forever Eid date? <span class="heart">❤️</span>
+        </div>
+        
+        <div class="eid-traditions">
+            <h3>Eid Traditions I Want to Share With You</h3>
+            <ul>
+                <li>Waking up early for Eid prayers together</li>
+                <li>Wearing matching Eid outfits</li>
+                <li>Preparing special Eid breakfast with you</li>
+                <li>Visiting our families together</li>
+                <li>Exchanging Eid gifts and surprises</li>
+                <li>Taking countless Eid photos together</li>
+                <li>Giving charity to those in need</li>
+                <li>Making special Eid dua together</li>
+                <li>Enjoying delicious Eid feast with family</li>
+                <li>Staying up late sharing stories and dreams</li>
+                <li>Planning our future Eids together</li>
+                <li>Creating our own special Eid traditions</li>
+            </ul>
+        </div>
+        
+        <div class="eid-countdown">
+            <h3>Countdown to Our Next Eid Together</h3>
+            <div class="countdown-container">
+                <div class="countdown-box">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="photo-gallery">
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/N25BgJQk/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Celebration">
+                <div class="gallery-caption">Our First Eid Together</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/mFBK55wg/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Moon">
+                <div class="gallery-caption">Under the Eid Moon</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/qY6PHn3G/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Decorations">
+                <div class="gallery-caption">Eid Decorations</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fdvyv9gm/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Food">
+                <div class="gallery-caption">Eid Feast Together</div>
+            </div>
+        </div>
+        
+        <div class="poem">
+            <p>As the moon was sighted, my heart took flight,</p>
+            <p>Thinking of you on this blessed night.</p>
+            <p>No feast is sweet without you near,</p>
+            <p>My <span class="special">Sabia Rani</span>, so precious and dear.</p>
+            <br>
+            <p>May every Eid from now until forever,</p>
+            <p>Find us together, no matter whatever.</p>
+            <p>Through life's joys and trials we'll face,</p>
+            <p>With you by my side, there's no better place.</p>
+            <br>
+            <p>So here's my promise, my love so true,</p>
+            <p>Every Eid will remind me of you.</p>
+            <p>Of laughter shared and hands held tight,</p>
+            <p>And love that glows like Eid's moonlight.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Created with all my love for the most amazing woman in the world <span class="heart">❤️</span></p>
+            <p>For my beloved <span class="special">Sabia Rani</span> - Eid Mubarak 2025</p>
+            <p>May Allah bless our love and grant us many happy Eids together</p>
+        </div>
+    </div>
+    
+    <script>
+        function showMessage(buttonNumber) {
+            // Hide all messages first
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById('message' + i).style.display = 'none';
+            }
+            
+            // Show the selected message
+            document.getElementById('message' + buttonNumber).style.display = 'block';
+            
+            // Scroll to the message
+            document.getElementById('message' + buttonNumber).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Countdown timer for next Eid (example date - replace with actual next Eid date)
+        function updateCountdown() {
+            // Set the date for next Eid (example: June 17, 2024)
+            const nextEid = new Date("March 31, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = nextEid - now;
+            
+            // Time calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+        
+        // Initial call
+        updateCountdown();
+    </script>
+</body>
+</html>
